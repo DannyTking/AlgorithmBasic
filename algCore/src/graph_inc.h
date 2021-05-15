@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Graph.h"
+#include "Graph/Graph.h"
 
 int degree(Graph &G, int v)
 {

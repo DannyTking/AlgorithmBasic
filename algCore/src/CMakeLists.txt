@@ -9,15 +9,18 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
 
 add_subdirectory(Graph)
+add_subdirectory(Search)
 
 # Add executable called "helloDemo" that is built from the source files
 # "demo.cxx" and "demo_b.cxx". The extensions are automatically found.
-add_executable (algCore main.cpp)
+FILE(GLOB SRCPP ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+message("${SRCPP}")
+add_executable (algCore ${SRCPP})
 
 # Link the executable to the Hello library. Since the Hello library has
 # public include directories we will use those link directories when building
 # helloDemo
-target_link_libraries (algCore LINK_PUBLIC Graph)
+target_link_libraries (algCore LINK_PUBLIC Search)
 
 # Link the executable to the Hello library. Since the Hello library has
 # public include directories we will use those link directories when building

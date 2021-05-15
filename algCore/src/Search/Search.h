@@ -1,5 +1,5 @@
 #pragma once
-#include "graph_inc.h"
+#include "Graph.h"
 
 class Search {
 public:
@@ -24,3 +24,5 @@ private:
     int mCount{0};
     std::vector<bool> mFlags;
 };
+
+int runSearch();
