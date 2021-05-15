@@ -1,4 +1,4 @@
-#include "search_inc.h"
+#include "inc_search.h"
 int main(int argn, char* args[])
 {
     int ret = runSearch();

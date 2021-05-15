@@ -4,7 +4,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Create a library called "Hello" which includes the source file "hello.cxx".
 # The extension is already found. Any number of sources could be listed here.
-include_directories(${CMAKE_SOURCE_DIR}/src/)
+include_directories(${CMAKE_SOURCE_DIR}/src)
+message(${CMAKE_SOURCE_DIR}/src)
 file(GLOB SRCPP ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 add_library (Graph ${SRCPP})
 

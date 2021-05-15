@@ -1,5 +1,4 @@
 #include "Graph.h"
-#include "std_inc.h"
 #include <sstream>
 
 void Graph::addEdge(int v, int w)
