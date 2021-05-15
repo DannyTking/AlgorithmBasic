@@ -10,7 +10,7 @@ mkdir -p config
 touch input/README.md
 
 mkdir -p output
-touch input/README.md
+touch output/README.md
 
 [ ! -f "CMakeLists.txt" ] && > CMakeLists.txt
 
