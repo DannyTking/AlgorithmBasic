@@ -1,2 +1,5 @@
 #!/bin/bash
-g++ main.cpp Graph.cpp -std=c++14
+mkdir -p build
+cd build
+cmake ..
+make -j2
