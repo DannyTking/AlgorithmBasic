@@ -1,0 +1,12 @@
+start print to IO
+This Graph has 6 vertices, 8 edges
+0: 1 2 5 
+1: 0 2 
+2: 0 1 3 4 
+3: 2 4 5 
+4: 2 3 
+5: 0 3 
+
+search dfs v: 0:
+0 1 2 3 4 5 
+connected
