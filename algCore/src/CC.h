@@ -10,4 +10,10 @@ class CC {
 				bool connected(int v, int w);
 				int count();
 				int id(int v);
+		private:
+				void dfs(Graph &G, int s, int id);
+		private:
+				std::vector<bool> mFlags;
+				std::vector<int> mIds;
+				int mCount;
 };
