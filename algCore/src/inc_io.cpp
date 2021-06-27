@@ -85,3 +85,23 @@ std::map<std::string, int> InputMapStream(std::string const& filePath)
     }
     return ret;
 }
+
+std::ostream& operator << (std::ostream& os, BinData const& bin){
+    return os << '(' << bin.a <<", "<<bin.b<<", char: "<<bin.c<<").";
+}
+
+void SaveBinData(std::string const& filePath, char const* buffer, size_t len)
+{
+	std::ofstream ofs {filePath, std::ios::binary};
+	if (!ofs.good()) { return; }
+	ofs.write(buffer, len);
+	return;
+}
+
+BinData ReadBinData(std::string const& filePath){
+     std::ifstream ifs {filePath, std::ios::binary};
+     if (!ifs.good()) return BinData {0, '0', 0.0};
+     BinData bin;
+     ifs.read(reinterpret_cast<char*>(&bin), sizeof(bin));
+     return bin;
+}
